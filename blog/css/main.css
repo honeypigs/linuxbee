@@ -1,10 +1,10 @@
 nav {
-	background-color: #ccc;
+	background-color: #18e;
 	height: 50px;
 }
 
 #banner {
-	background-color: #777;
+	background:url("../img/banner.jpg");
 	height: 600px;
 }
 
@@ -40,8 +40,14 @@ nav .logo {
 	top: 160px;
 }
 
+#banner .inner .hr {
+	height: 2px;
+	background-color: white;
+}
+
 #banner .inner h1 {
-	margin: 0px;	
+	margin: 10px 0;	
+	font-size: 40px;
 }
 
 button {
@@ -52,27 +58,124 @@ button {
 }
 
 #banner button {
+	margin: 10px 0;
 	padding: 10px 20px;
+	border-radius: 4px;
+	background-color: #18e;
 }
  
  #banner .inner .more {
-	margin-top: 200px;
+	margin-top: 150px;
+	color: white;
  }
 
  .sub-heading {
+ 	font-size: 18px;
  	line-height: 30px;
- 	margin: 10px;
+ 	margin: 10px 0;
  }
 
- .logo{
+ .logo {
  	font-size: 20px;
- 	font-weight: 700px;
+ 	font-weight: 700;
  	letter-spacing: 1px;
 }
 
-.logo a{
+.logo a {
 	display: inline-block;
 	height: inherit;
 	color: white;
 	text-decoration: none;
+}
+
+h2 {
+	margin: 0;
+	font-size: 30px;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0px auto; 
+}
+
+.green-section {
+	padding: 100px 0;
+	text-align: center;
+	background-color: #089DB0;
+	color: #fff;
+}
+.wrapper .hr {
+	height: 2px;
+	width: 60%;
+	margin: 20px auto;
+	background-color: #098E9F;
+}
+.green-section .icon-group .icon {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border:1px solid #0D6F7C;
+	transform: rotate(45deg);
+	margin: 20px;
+}
+
+.icon-group {
+	margin-top: 20px;	
+}
+
+.gray-section {
+	background-color: #252F34;
+	color: #fff;
+}
+
+.gray-section .img-section {
+	width: 45%;
+
+}
+
+.img-section img {
+	width: 100%;
+}
+
+.gray-section .text-section {
+	width: 45%;
+}
+
+.article-preview > div{
+	font-size: 0px;
+	float: left;
+}
+
+.article-preview:after {
+	content: "";
+	display: block;
+	clear: both;	
+}
+
+.article-preview:nth-child(odd){
+	background-color: rgba(255,255,255,0.05);
+}
+
+.text-section {
+	margin: 8% 5%;
+
+}
+
+.text-section h2 {
+	margin-bottom: 20px;
+}
+
+.text-section p{
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.text-section .sub-heading {
+	font-size: 22px;
+	margin-top: 0px;
+}
+
+.purple-section {
+	background-color: 	#383356;
+	color: #fff;
 }
