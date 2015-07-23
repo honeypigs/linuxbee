@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter-selector</title>
+	<script type="text/javascript" src = "js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="divtest">
+		<ul>
+			<li>list1</li>
+			<li><p><span>hahahahha2</span></p></li>
+			<li>hahahahha3</li>
+			<li><p>hahahahha4</p></li>
+			<li>list5</li>
+			<li title="mylove">imooc hahahaha</li>
+			<li title="you">imooc hahahaha</li>
+			<li title="he">imooc hahahaha</li>
+		</ul>
+		<ul>
+			<li title="ha">test1</li>
+			<li title="he">test2</li>
+			<li title="hei">test3</li>
+			<li title="hu">test4</li>
+			<li title="en">test5</li>
+		</ul>
+		<input type="hidden" id="hidden" value="I am hidden">
+		<hr>
+	</div>
+	<script type="text/javascript">
+		$("li:first,li:last").css('color', 'red');	//The first and last selector
+
+		$("li:eq(2)").css('color', 'blue');		//The special selector
+
+		$("li:contains('ha')").css('background', 'pink');	//Content selector
+
+		$("li:has(p)").css('border', '1px dotted black');	//Has Element selector & !has element selector
+
+		var hiddenValue = $("input:hidden").val();	//Element hidden selector & element !hidden selector
+		$("li:eq(2)").html(hiddenValue);
+
+		$("li[title = 'mylove']").css('color', 'purple');	//Attribute selector
+
+		$("li[title *= 'y']").css('background', 'yellow');	//Attribute content selector
+
+		$("li:first-child,li:last-child").css('list-style', 'none');	//All the first and last child selector
+	</script>
+</body>
+</html>

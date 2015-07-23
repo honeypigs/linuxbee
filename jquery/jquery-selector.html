@@ -33,16 +33,24 @@
 		green
 	</div>
 	<script type="text/javascript">
-		$("#divtext").html($("#hahaha").html());
-		$("button").attr("disabled","true");
-		var redHTML = $(".red").html();
+		$("#divtext").html($("#hahaha").html());	//ID selector
+
+		$("button").attr("disabled","true");	//Element selector
+
+		var redHTML = $(".red").html();		//Class selector
 		$(".green").html(redHTML);
-		$("*").attr("disabled","true");
-		$(".red,#divtext").html("doudoudoudou");
-		$(".form form input").css('background-color', 'blue');
-		$(".form>span").css('color', 'red');
-		$("p+span").css('color', 'green');
-		$("p~span").css("background-color","pink");
+
+		$("*").attr("disabled","true");		//All selector
+
+		$(".red,#divtext").html("doudoudoudou");	//Multipe selector
+
+		$(".form form input").css('background-color', 'blue');	//Up to down selector	
+
+		$(".form>span").css('color', 'red');	//Father to child selector
+
+		$("p+span").css('color', 'green');		//The first after one
+
+		$("p~span").css("background-color","pink");	//The all after one
 	</script>
 </body>
 </html>
