@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery-select</title>
+	<script type="text/javascript" src = "js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="hahaha">
+		hahahaha
+		<button>click</button>
+	</div>
+	<div class="red">
+		red
+	</div>
+	<div class = "form">
+		<form action="#">
+			<input type="button">
+			<input type="text">
+			<input type="radio">
+			<input type="checkbox">
+		</form>
+		<p>
+			<span>hehehe</span>
+		</p>
+		<span>hehehe</span>
+		<span>hehehe</span>
+	</div>
+	<hr>
+	<div id="divtext">		
+	</div>
+	<div class="green">
+		green
+	</div>
+	<script type="text/javascript">
+		$("#divtext").html($("#hahaha").html());
+		$("button").attr("disabled","true");
+		var redHTML = $(".red").html();
+		$(".green").html(redHTML);
+		$("*").attr("disabled","true");
+		$(".red,#divtext").html("doudoudoudou");
+		$(".form form input").css('background-color', 'blue');
+		$(".form>span").css('color', 'red');
+		$("p+span").css('color', 'green');
+		$("p~span").css("background-color","pink");
+	</script>
+</body>
+</html>
