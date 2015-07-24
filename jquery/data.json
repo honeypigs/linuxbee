@@ -1,0 +1,10 @@
+{
+"cloth" : [
+		{"name" : "shirt" , "data" : 5},
+		{"name" : "sweater" , "data" : 20},
+		{"name" : "T-shirt" , "data" : 40},
+		{"name" : "pants" , "data" : 10},
+		{"name" : "high-heeled shose" , "data" : 10},
+		{"name" : "sock" , "data" : 20}
+	]
+}	
