@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Element-method</title>
+	<script type="text/javascript"  src = "js/jquery.min.js"></script>
+	<style>
+		.bg{
+			background-color: pink;
+			color: red;
+		}
+	</style>
+</head>
+<body>	
+	<a href="http://127.0.0.1" id="a1">change url</a>
+	<div>After changed<span id="tip"></span></div>
+	<div id="html"></div>
+	<div id="text"></div>
+	<script type="text/javascript">
+
+		$("#a1").attr('href', 'www.imooc..com');		//add some attribute  &&removeAttr();
+		var url = $("#a1").attr("href");
+		$("#tip").html(url);
+
+		var content = "<b>I am fat</b>";		//different between html() &text()
+		$("#html").html(content);
+		$("#text").text(content);
+
+		$("#html").addClass('bg');			//add class &&removeClass()
+		$("#text").css('color', 'purple');			//add css style
+
+		function addcontent() {	
+			var testhtml = "<div id = 'test' title = 'hi'> I am cteated by append</div>";
+			return testhtml;
+		};
+		$("body").append(addcontent);			//add element && appendTo()
+
+		var $before = "<b>:jion:</b1>";
+		var $after = "<div>--------------------------------------------------------------</div>"
+		$("#tip").before($before);			//add element before and after
+		$("div:eq(1)").after($after);
+
+		$("body").append($("div:eq(2)").clone());	//clone the element
+
+		var $replace = "hahahhahahahaha";
+		var $replaceall = "<div>haha</div>"
+		$("a").replaceWith($replace);
+		$($replaceall).replaceAll("#text");		//use different method to replace element
+
+		$("#html").wrap('<div style="border :1px solid blue"></div>');
+		$("#html").wrapInner('<div style="color : white"></div>');	//add element out the element 
+
+		$("div").each(function(index) {
+			if (index == 0) {
+				$(this).css('background', 'green');	//each map the element
+			};
+		});
+
+		
+	</script>
+</body>
+</html>
