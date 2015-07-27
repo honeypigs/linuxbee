@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8" http-equiv = "X-UA-Compatible" content = "IE=edge">
 	<title>Bing search</title>
+	<script type="text/javascript" src= "js/jquery.min.js"></script>
 	<style type = "text/css">
 	body {
+		font-family: sans-serif;
 		background-color: #333;
 	}
 
@@ -33,7 +35,7 @@
 	.input-text {
 		font-size: 20px;	
 		height: 25px;
-		width: 350px;
+		width: 388px;
 		line-height: 25px;
 		outline: none;
 		float: left;
@@ -46,12 +48,37 @@
 		background-image: url(img/search-button.png);
 		width: 29px;
 		height: 29px;
+		cursor: pointer: ;
 	}
 
 	.search-box {
 		position: absolute;
 		top: 200px;
 		left: 300px;
+	}
+
+	.suggest {
+		background-color: #fff;
+		width: 388px;
+		border: 1px solid #999;
+	}
+
+	.suggest ul {
+		list-style: none;
+		margin: 0;
+		padding: 0; 
+	}
+
+	.suggest ul li {
+		line-height: 25px;
+		padding: 3px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	.suggest ul li:hover {
+		text-decoration: underline;
+		background-color: #B2BBC3;
 	}
 	</style>
 </head>
@@ -60,12 +87,18 @@
 		<div class="search-box">
 			<div class="logo">
 			</div>
-			<form action="">
-				<input type="text" class = "input-text">
-				<input type="submit" class = "input-button" value = "">
+			<form action="https://cn.bing.com/search" target = "_blank" id = "search-form" class = "search-form">
+				<input type="text" class = "input-text" id = "input-text" name = "q" autocomplete = "off">
+				<input type="submit" class = "input-button" value = "" id = "input-button" >
 			</form>
 		</div>
 	</div>
-	
+	<div id="search-suggest" class = "suggest" style = "display : none">
+		<ul>
+			<li>search1</li>
+			<li>search2</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src = "js/bing-search.js"></script>
 </body>
 </html>
