@@ -46,10 +46,20 @@ $("#input-text").bind('keyup', function() {
 	console.log(searchText);
 	//makeCorsRequest(searchText);
 
-	var JSONP=document.createElement("script");  
-    	JSONP.type="text/javascript";  
-    	JSONP.src="http://api.bing.com/qsonhs.aspx?callback=jsonpCallback&p="+ searchText ;
-    	document.getElementsByTagName("body")[0].appendChild(JSONP);
+	$.ajax({  
+		url:"http://api.bing.com/qsonhs.aspx?p="+ searchText,  
+		dataType:'jsonp',  
+		data:'',  
+		jsonp:'callback',  
+		success:function(result) {  
+			console.log(result);
+	    }  
+	}),  
+
+	// var JSONP=document.createElement("script");  
+ //    	JSONP.type="text/javascript";  
+ //    	JSONP.src="http://api.bing.com/qsonhs.aspx?callback=jsonpCallback&p="+ searchText ;
+ //    	document.getElementsByTagName("body")[0].appendChild(JSONP);
 	$("#search-suggest").show().css({
 		top: $("#search-form").offset().top +$(".search-form").height() + 10 ,
 		left: $("#search-form").offset().left,
