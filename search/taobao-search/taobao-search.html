@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<title>Taobao-search</title>
+	<style type="text/css">
+	.wrapper {
+		position:relative;
+		width: 60%;
+		height: 2.4em;
+		margin: 0 auto;
+	}
+	.search-pannel {
+		height: inherit;
+		width: 90%;
+		float: left;
+	}
+	.search-list {
+		width: 10%;
+		height: inherit;
+		float: left;
+		background: #ff4200;
+		padding: 3px 0px;
+		overflow: hidden;
+	}
+	body {
+		font-size: 18px;
+		font-family: tahoma,arial,sans-serif;
+	}
+	form {
+		float: left;
+		background-color: #FF4200;
+		height: inherit;
+		width: 90%;
+		padding: 3px 0 3px 0px;
+	}
+	.special-wrapper a {
+		font-size: 0.8em;
+		display: inline-block;
+		text-decoration: none;
+		height: inherit;
+		color: #6c6c6c;
+		background-color: white;
+	}
+	.special-wrapper {
+		float: right;
+		height: inherit;
+	}
+	.button-wrapper {
+		float: right;
+		height: inherit;
+	}
+	.search-btn {
+		background-color: #FF4200;
+		color: #fff;
+		padding-right: 0px; 
+		border: 0px;
+		height: inherit;
+		font-size: 1.8em;
+		font-weight: bolder;
+		cursor:  pointer;
+	}
+	input {
+		height: inherit;
+		padding: 0px;	
+		border: 0px;
+		width: 100%;
+		outline: 0px;
+		background-color: #fff;
+	}
+	.input-text {
+		width: 90%;
+		height: inherit;
+	}
+	i {
+		position: absolute;
+		border: 3px solid #ccc;
+		border-radius: 100%;
+		left: 86px;
+		top: 16px;
+		height: 10px;
+		width: 10px;
+		z-index: 1;
+	}
+	ul {
+		width: 100%;
+		list-style: none;
+		margin: 0px;
+		height: inherit;
+		padding: 0px;
+		background-color: #eee;
+	}
+	ul li {
+		display: block;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: inherit;
+	}
+	ul li a {
+		line-height: 43.2px;
+		display: block;
+		height: inherit;
+		width: 100%;
+		text-decoration: none;
+		text-align: center;
+		padding-right: 3px;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="search-list">
+			<ul class = "">
+				<li id = "tab1"><a href="#">SHOP</a></li>
+				<li id = "tab2"><a href="#">THING</a></li>
+			</ul>
+		</div>
+		<div class="search-pannel">
+			<form action="">
+				<div class="button-wrapper">
+					<button type = "submit" class= "search-btn">GO</button>	
+				</div>
+				<div class="input-text">
+					<input type="text" x-webkit-speech ="">
+					<i></i>	
+				</div>
+				
+			</form>
+			<div class = "special-wrapper">
+				<a href="#">Special<br>search</a>	
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
