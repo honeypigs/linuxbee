@@ -2,9 +2,9 @@
 	header("Content-type:text/plain;charset = utf-8");
 	$staff = array
 	(
-		array("name" => "Jack","number" => "100","sex" => "Men","job" => "manager"); 
-		array("name" => "Daivl","number" => "101","sex" => "Men","job" => "enginer"); 
-		array("name" => "Honey","number" => "102","sex" => "Women","job" => "manager"); 
+		array("name" => "Jack","number" => "100","sex" => "Men","job" => "manager"), 
+		array("name" => "Daivl","number" => "101","sex" => "Men","job" => "enginer"),
+		array("name" => "Honey","number" => "102","sex" => "Women","job" => "manager")
 
 	);
 
