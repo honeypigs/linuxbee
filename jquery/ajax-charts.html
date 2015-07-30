@@ -9,7 +9,6 @@
 	<div id = "main" style = "height : 400px;"></div>
 	<script type = "text/javascript" src = "http://echarts.baidu.com/build/dist/echarts.js"></script>
 	<script type="text/javascript">
-	var myChart	;
 	require.config({
 		paths:{
 			echarts:"http://echarts.baidu.com/build/dist"
@@ -33,7 +32,7 @@
 				xAxis: [
 				{
 					type: "category",
-					data: ["qwert"]
+					data: []
 				}
 				],
 				yAxis: [
@@ -45,39 +44,27 @@
 				{
 					"name": "sales",
 					"type": "bar",
-					"data": [1,2,3,4,5]
+					"data": []
 				}
 				]
 			};
-			myChart.setOption(options);
-		}
-		);
-	
-		
 			$.ajax({	
 				url: 'data.json',
 				type: 'GET',
 				dataType: 'json',
 				success: function(JsonData){
-					var Names = [];
-					var Nums = [];
-					//var options = myChart.getOption(); 
-					console.log(JsonData);	
-					for (var i = 0; i < JsonData.cloth.length; i++) {
-						var Name = JsonData.cloth[i].name;
-						var Num = JsonData.cloth[i].data;
-						Names.push(Name);
-						Nums.push(Num);
-						console.log(Nums);
-						// options.xAxis[0].data = Names;
-						// options.series[0].data = Nums;
-						// myChart.setOption(options);	
-					};
+					for(var key in JsonData.cloth) {
+						options.xAxis[0].data.push(JsonData.cloth[key].name);
+						options.series[0].data.push(JsonData.cloth[key].data);
+					}
+					myChart.setOption(options);
 				},
 				error : function (){
 					alert("error");
 				}
 			});
+		}
+		);
 	</script>
 </body>
 </html>
