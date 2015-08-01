@@ -13,6 +13,7 @@
 		width: 600px;
 		height: 40px;
 		margin: 0 auto;
+		border-bottom: 8px solid #dc4e1b ;
 	}
 	ul {
 		height: inherit;
@@ -34,49 +35,30 @@
 		color: black;
 		display: inline-block;
 	}
-	a:hover {
-		color: #fff;
-		background-color: #333;
-
-	}
-	.second {
+	ul li span {
+		height: inherit;
+		padding:  0 10px;
+		text-decoration: none;
+		color: black;
 		display: none;
-		position: absolute;
-		left: 0px;
-		top: 40px;
 	}
-	.second li {
-		padding: 0px;
-		margin: 0px;
+	ul li:hover span{
+		display: inline-block;
+		background-color: #dc4e1b;
+		color: #fff;
 	}
-	.second li a{
-		background-color: #eee;
-		clear:both;
-		margin: 0;
-		margin-top: 1px;
+	ul li:hover a {
+		display: none;
 	}
-
-	.second li a:hover {
-		background-color: #071747;
-	}
-	nav ul li:hover ul{
-		display: block;
-	}
-
 	</style>
 </head>
 <body>
 	<nav>
 		<ul>
-			<li><a href="#">title1</a></li>
-			<li><a href="#">title2</a>
-				<ul class = "second">
-					<li><a href="">little1</a></li>
-					<li><a href="">little2</a></li>
-				</ul>
-			</li>
-			<li><a href="#">title3</a></li>
-			<li><a href="#">title4</a></li>			
+			<li><a href="#">title1</a><span>change</span></li>
+			<li><a href="#">title2</a><span>change</span></li>
+			<li><a href="#">title3</a><span>change</span></li>
+			<li><a href="#">title4</a><span>change</span></li>			
 		</ul>
 	</nav>
 </body>
